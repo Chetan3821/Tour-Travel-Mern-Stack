@@ -19,7 +19,7 @@ export const getBooking = async(req,res) => {
    const id = req.params.id
    
    try {
-      const book = await Booking.findById(id)
+      const {book} = await Booking.findById(id)
 
       res.status(200).json({success:true, message:"Successful!", data:book})
    } catch (error) {
@@ -32,7 +32,7 @@ export const getBooking = async(req,res) => {
 export const getAllBooking = async(req,res) => {
    
    try {
-      const books = await Booking.find()
+      const {books} = await Booking.find()
 
       res.status(200).json({success:true, message:"Successful!", data:books})
    } catch (error) {

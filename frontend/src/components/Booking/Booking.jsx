@@ -114,4 +114,4 @@ const Booking = ({ tour, avgRating }) => {
    )
 }
 
-export default Booking
+export default Booking;
